@@ -23,6 +23,7 @@ public class InMemoryWorldDao implements WorldDao {
         createCities2500();
         createCities3000();
         createCities3600();
+        // Group cities by countries
         for (City city : cities.values()) {
             Country country = countries.get(city.getCountryCode());
             if (country == null) {
